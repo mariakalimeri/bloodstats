@@ -1,0 +1,6 @@
+^data-raw$
+^deploy\.sh$
+^.travis.yml$
+^README\.Rmd$
+^bloodstats\.Rproj$
+^\.Rproj\.user$

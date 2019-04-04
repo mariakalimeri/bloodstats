@@ -1,0 +1,12 @@
+language: R
+
+cache: packages
+
+    after_success:
+      - test $TRAVIS_PULL_REQUEST == "false" &&
+        test $TRAVIS_BRANCH == "master" &&
+        bash deploy.sh
+
+env:
+    global:
+        secure: kkRaoPJwGQ7Qy/7MkExc6pwc90CKfeRrFjdtby/cKy+BGwtTgh+ih0c6PjmqYiPk4S2KOxcyh3X8K0h67YSr0eYQ6gLWUpxInrGnEIMKw6qcD7lq2kObm9nh6ZYAbJ9rFHrQ5SmH+WxvdrLUb/0Zt4VfSyJckBmM58GZ/HTt3Kpqyizj2VP1kpesSfXzb+jmFD05wpR8RRh4mrAiXJsLz8hpIIG6DokKhpD8B1F0H/1ZsW6nFYYoJPfInOhVTevNqAYdj/ggTpJo0+sq2TIihp5NAWga6PkCM5zaNdF/sCee+CkhbuYxpa6u411VxUlzd0qtLJ6ywdoksWYh3GaTuhdluFd0sj8p1wzVb1toK3Y/W/X/WBIihOjDdnoAMkyoA+Fw9wWfesqbb+lepzDnQYYfFvNCXaxnfHKHIbkqF5ygB2SMxlxT8nYvbjm0nMsXOHJP2pAI7/1gJt7CsJaUtc9QYbKkjX2diEV084HDDi/n3D7Ips32OAGsR5dQ1v9TSZHZOwgvSCxKiFKLSjU47jZV8jMq0Jk3ap7qvo393C7pMBYW203hRyKnelLEfclHEYU2eQjp69pid9zAaAFMtai/5ndU+lVe2+yR3R+UVQIEb1b0NqwcAAe4TxLCDHrlw9hopQFZIitZPocLFqqSLHqO6fSEgD+5ZAkqB/JcmV4=
